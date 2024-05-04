@@ -516,7 +516,7 @@ input[type="submit"]:focus {
   height: 100%;
   width: 100%;
   border-radius: 30px;
-  padding: 60px;
+  padding: 50px;
   opacity: 0;
   overflow: auto;
   visibility: hidden;
@@ -538,7 +538,7 @@ input[type="submit"]:focus {
   height: 100%;
   width: 100%;
   border-radius: 30px;
-  padding: 60px;
+  padding: 50px;
   overflow: auto;
 }
 
@@ -1802,7 +1802,7 @@ input[type="text"],
 .ajax-page-wrapper {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 20px 60px 50px;
+  padding: 20px 40px 50px;
 }
 
 .ajax-page-nav {
@@ -1843,6 +1843,14 @@ input[type="text"],
 .ajax-page-title h1 {
   display: inline-block;
   margin: 0;
+}
+
+.ajax-page-title h1:after {
+  border-bottom: 3px double #04b4e0;
+  content: "";
+  display: block;
+  padding-top: 5px;
+  width: 120px;
 }
 
 .portfolio-block {
@@ -2492,6 +2500,24 @@ blockquote {
 }
 
 @media only screen and (max-width: 480px) {
+  .animated-section {
+    padding: 30px;
+  }
+
+  .single-page-content {
+    padding: 30px;
+  }
+
+  .ajax-page-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 20px 10px 50px;
+  }
+
+  .ajax-page-title {
+    padding-bottom: 10px;
+  }
+
   .section-title-block.first-style .section-description {
     margin: 7px 0 0;
     width: 100%;
