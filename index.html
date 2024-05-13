@@ -34,10 +34,11 @@
 
   <body>
     <!-- Animated Background -->
-    <div
+    <div class="lm-animated-bg"><canvas id="scene"></canvas></div>
+    <!-- <div
       class="lm-animated-bg"
       style="background-image: url(img/main_bg.png)"
-    ></div>
+    ></div> -->
     <!-- /Animated Background -->
 
     <!-- Loading animation -->
@@ -775,368 +776,57 @@
 
                     <div class="skills-info skills-second-style">
                       <!-- Skill  -->
-                      <div style="display: flex; flex-wrap: wrap">
-                        <!-- Next.js -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Next.js
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
+                      <div
+                        id="skills"
+                        style="display: flex; flex-wrap: wrap"
+                      ></div>
 
-                        <!-- React.js -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          React.js
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
+                      <script>
+                        const skills = [
+                          "Next.js",
+                          "React.js",
+                          "JavaScript",
+                          "TypeScript",
+                          "Python",
+                          "Tailwind CSS",
+                          "CSS",
+                          "Shadcn/UI",
+                          "Bootstrap",
+                          "Firebase",
+                          "Django",
+                          "Prisma",
+                          "SQL",
+                          "GraphQL",
+                          "SEO",
+                          "Turbo Repo",
+                          "HTML",
+                          "CSS",
+                          "Git Workflow",
+                        ]
 
-                        <!-- JavaScript -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          JavaScript
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
+                        const skillsContainer =
+                          document.getElementById("skills")
 
-                        <!-- TypeScript -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          TypeScript
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
+                        // Generate HTML for each skill
+                        skills.forEach((skill) => {
+                          const skillElement = document.createElement("div")
+                          skillElement.style.cssText = `
+                          padding: 7px 8px;
+                          border: 1px solid #2ecc71;
+                          border-radius: 9999px;
+                          background-color: transparent;
+                          color: #2ecc71;
+                          font-size: 14px;
+                          line-height: 1;
+                          margin-right: 8px;
+                          margin-bottom: 8px;
+                          display: inline-block;
+    `
+                          skillElement.innerHTML = `${skill} <i class="lni lni-checkmark-circle"></i>`
+                          skillsContainer.appendChild(skillElement)
+                        })
+                      </script>
 
-                        <!-- Python -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Python
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- Tailwind CSS -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Tailwind CSS
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- CSS -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          CSS
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- Shadcn/UI -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Shadcn/UI
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- Bootstrap -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Bootstrap
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- Firebase -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Firebase
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- Django -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Django
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- Prisma -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Prisma
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- SQL -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          SQL
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- GraphQL -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          GraphQL
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- SEO -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          SEO
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- Turbo Repo -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Turbo Repo
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- HTML -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          HTML
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- CSS -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          CSS
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-
-                        <!-- Git Workflow -->
-                        <div
-                          style="
-                            padding: 7px 8px;
-                            border: 1px solid #2ecc71;
-                            border-radius: 9999px;
-                            background-color: transparent;
-                            color: #2ecc71;
-                            font-size: 14px;
-                            line-height: 1;
-                            margin-right: 8px;
-                            margin-bottom: 8px;
-                            display: inline-block;
-                          "
-                        >
-                          Git Workflow
-                          <i class="lni lni-checkmark-circle"></i>
-                        </div>
-                      </div>
                       <!-- End of Skill  -->
                     </div>
                     <!-- End of Design Skills -->
@@ -1729,5 +1419,8 @@
       data-cf-beacon='{"rayId":"87c011edace840ef","version":"2024.4.0","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","b":1}'
       crossorigin="anonymous"
     ></script>
+    <!-- Displacement Sphere - ThreeJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    <script src="js/canvas.js"></script>
   </body>
 </html>
