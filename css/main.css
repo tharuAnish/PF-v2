@@ -2501,11 +2501,11 @@ blockquote {
 
 @media only screen and (max-width: 480px) {
   .animated-section {
-    padding: 22px;
+    padding: 20px;
   }
 
   .single-page-content {
-    padding: 22px;
+    padding: 20px;
   }
 
   .ajax-page-wrapper {
